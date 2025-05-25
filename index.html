@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatine Belkhammar - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .contact-info p, .skills ul, .languages ul {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills ul, .languages ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skills li, .languages li {
+            background: #3498db;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .experience, .project {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience h3, .project h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience p, .project p {
+            margin-bottom: 0.3rem;
+        }
+
+        .technologies {
+            color: #666;
+            font-style: italic;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fatine Belkhammar</h1>
+        <p>Computer Engineering Student Seeking Summer 2025 Internship</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="profile">
+            <h2>Profile</h2>
+            <p>Computer Engineering student with a strong foundation in mobile development, full-stack web development, and database management. Passionate about creating scalable applications and eager to apply technical skills in a dynamic environment. Seeking a summer 2025 internship.</p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact</h2>
+            <p>Casablanca, Morocco 20470</p>
+            <p>+212 635 291 627</p>
+            <p>Blkfatine2@gmail.com</p>
+        </div>
+
+        <div class="section" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Problem Solving</li>
+                <li>Creativity</li>
+                <li>Time Management</li>
+                <li>Java</li>
+                <li>HTML/CSS/JavaScript</li>
+                <li>Django/Python</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+
+        <div class="section" id="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>Arabic - Native</li>
+                <li>French - Fluent</li>
+                <li>English - Fluent</li>
+                <li>Korean - Beginner</li>
+            </ul>
+        </div>
+
+        <div class="section" id="education">
+            <h2>Education</h2>
+            <div class="experience">
+                <h3>Computer Engineering Degree (In Progress)</h3>
+                <p>EMSI, Casablanca (2021 - 2026)</p>
+            </div>
+            <div class="experience">
+                <h3>Scientific Baccalaureate</h3>
+                <p>Lycée Moulay Abdellah (2021)</p>
+            </div>
+        </div>
+
+        <div class="section" id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience">
+                <h3>Intern | WebRasma</h3>
+                <p>July - September 2024</p>
+                <p class="technologies">Technologies: Django, PostgreSQL, JavaScript, WebSockets</p>
+                <p>Developed a CRM application (client management, interaction tracking, task automation).</p>
+            </div>
+        </div>
+
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Medical Quiz App</h3>
+                <p>February 2025 - May 2025</p>
+                <p class="technologies">Technologies: Java, Firebase</p>
+                <p>Developed a mobile quiz application for medical students and professionals.</p>
+            </div>
+            <div class="project">
+                <h3>Customer Support Platform</h3>
+                <p>May 2024 - June 2024</p>
+                <p class="technologies">Technologies: Python, Django, PostgreSQL, JavaScript</p>
+                <p>Created a ticket management and customer interaction tracking system.</p>
+            </div>
+            <div class="project">
+                <h3>JobMatch Recruitment Application</h3>
+                <p>2025</p>
+                <p class="technologies">Technologies: Node.js, React, JavaScript</p>
+                <p>Developed an intelligent platform for matching recruiters and candidates based on skills.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Fatine Belkhammar. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Highlight active navigation link
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
