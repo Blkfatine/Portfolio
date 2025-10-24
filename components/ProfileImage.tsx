@@ -17,11 +17,12 @@ export default function ProfileImage({ size = 'medium', className = '' }: Profil
       <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full opacity-20 blur-xl"></div>
       <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary-600 shadow-2xl shadow-primary-600/30">
         <Image
-          src="/images/profile.jpg"
+          src="/images/profile.png"
           alt="Fatine Belkhammar"
           fill
           className="object-cover"
           priority
+          quality={100}
           sizes={size === 'large' ? '(max-width: 768px) 256px, 320px' : size === 'medium' ? '192px' : '64px'}
         />
       </div>

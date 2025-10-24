@@ -69,25 +69,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      {/* Social Media Sidebar */}
-      <div className="fixed right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
-        <div className="flex flex-col items-center space-y-6">
-          <div className="text-white text-sm font-medium transform -rotate-90 whitespace-nowrap">
-            Follow me
-          </div>
-          <div className="w-px h-8 bg-white"></div>
-          <div className="w-1 h-1 bg-white rounded-full"></div>
-          <div className="flex flex-col space-y-4">
-            <a href="https://linkedin.com/in/fatine-belkhammar-791aa1239" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary-400 transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="https://github.com/Blkfatine" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary-400 transition-colors">
-              <Github size={20} />
-            </a>
-          </div>
-        </div>
-      </div>
     </section>
   )
 }

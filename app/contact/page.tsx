@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Send, Mail, MapPin, Phone, ArrowLeft, Home } from 'lucide-react'
+import { Send, Mail, MapPin, Phone, ArrowLeft, Home, Linkedin, Github } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Contact() {
@@ -112,6 +112,8 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div>
+
+          <div className="space-y-6">
             <h2 className="text-2xl font-semibold text-white mb-6">Send a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -181,7 +183,27 @@ export default function Contact() {
               </button>
             </form>
           </div>
+          </div>
         </div>
+
+        {/* Social Media Sidebar */}
+      <div className="fixed right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+        <div className="flex flex-col items-center space-y-6">
+          <div className="text-white text-sm font-medium transform -rotate-90 whitespace-nowrap">
+            Follow me
+          </div>
+          <div className="w-px h-8 bg-white"></div>
+          <div className="w-1 h-1 bg-white rounded-full"></div>
+          <div className="flex flex-col space-y-4">
+            <a href="https://linkedin.com/in/fatine-belkhammar-791aa1239" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary-400 transition-colors">
+              <Linkedin size={20} />
+            </a>
+            <a href="https://github.com/Blkfatine" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary-400 transition-colors">
+              <Github size={20} />
+            </a>
+          </div>
+        </div>
+      </div>
 
         {/* Success Message at the bottom of the page */}
         {status === 'success' && (

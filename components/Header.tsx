@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Menu, X, Github, Instagram, MessageCircle } from 'lucide-react'
+import { Menu, X, Github, Instagram, MessageCircle, Linkedin } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,12 +27,12 @@ export default function Header() {
                 </a>
               </nav>
               <div className="flex items-center space-x-4">
-                <a href="https://github.com/Blkfatine" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  <Github size={20} />
-                </a>
-                <a href="https://linkedin.com/in/fatine-belkhammar-791aa1239" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  <MessageCircle size={20} />
-                </a>
+            <a href="https://linkedin.com/in/fatine-belkhammar-791aa1239" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary-400 transition-colors">
+              <Linkedin size={20} />
+            </a>
+            <a href="https://github.com/Blkfatine" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary-400 transition-colors">
+              <Github size={20} />
+            </a>
                 <a
                   href="/contact"
                   className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center space-x-2"
