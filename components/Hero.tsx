@@ -40,18 +40,15 @@ export default function Hero() {
         </div>
 
         {/* Main headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Computer Engineering Student Seeking{' '}
-          <span className="gradient-text">{'{Internship}'}</span>
-        </h1>
+       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+  Aspiring <span className="gradient-text">Full-Stack Developer</span> & Database Enthusiast
+</h1>
 
         {/* Description */}
         <p className="text-lg text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Final-year computer engineering student at EMSI Casablanca, passionate about web application 
-          development and database management. Looking for a 4–6 month internship to apply my skills 
-          and gain professional experience.
+          Passionate about building web and mobile applications with clean architecture and efficient database management. 
+          Skilled in full-stack development, eager to transform ideas into robust, scalable solutions.
         </p>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <a
