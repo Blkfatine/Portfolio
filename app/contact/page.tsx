@@ -1,31 +1,35 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, Variants } from 'framer-motion'
 import { Send, Mail, MapPin, Phone, ArrowLeft, Home, Linkedin, Github, Check, X } from 'lucide-react'
 import Link from 'next/link'
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
+const fadeInUp: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 20 
+  },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
+      ease: [0.16, 1, 0.3, 1],
+      type: "tween"
     }
   }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
-  visible: {
+  visible: (i = 1) => ({
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
+      delayChildren: 0.2 * i
     }
-  }
+  })
 };
 
 export default function Contact() {
@@ -192,8 +196,7 @@ export default function Contact() {
 
                 <div 
                   className="flex items-center space-x-4 p-4 rounded-xl hover:bg-white/5 transition-colors group cursor-pointer"
-                  onMouseEnter={() => document.getElementById('message-section')?.classList.add('ring-2', 'ring-primary-500/50')}
-                  onMouseLeave={() => document.getElementById('message-section')?.classList.remove('ring-2', 'ring-primary-500/50')}
+                  
                 >
                   <div className="bg-gradient-to-br from-purple-500 to-indigo-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
                     <MapPin className="text-white" size={20} />
@@ -278,7 +281,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 bg-white/5 border ${isValidEmail || !formData.email ? 'border-white/10' : 'border-red-500/50'} rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-transparent transition-all`}
-                      placeholder="You@example.com"
+                      placeholder="You@gmail.com"
                       required
                       disabled={isSubmitting}
                       pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
