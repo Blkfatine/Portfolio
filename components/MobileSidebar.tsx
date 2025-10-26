@@ -66,7 +66,8 @@ export default function MobileSidebar({ activeSection, onSectionChange }: Mobile
     { 
       href: '/contact', 
       label: 'Contact', 
-      icon: Mail 
+      icon: Mail,
+      external: true
     }
   ]
 
