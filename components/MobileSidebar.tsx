@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Menu, X, Home, User, Briefcase, GraduationCap, Code, Mail } from 'lucide-react'
+import { Menu, X, Home, User, Briefcase, GraduationCap, Code, Mail, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
 interface MobileSidebarProps {
@@ -40,8 +40,22 @@ export default function MobileSidebar({ activeSection, onSectionChange }: Mobile
   ]
 
   const navigationItems = [
-    { href: '/', label: 'Home', icon: Home },
-    { href: '/contact', label: 'Contact', icon: Mail }
+    { 
+      href: 'https://linkedin.com/in/fatine-belkhammar-791aa1239', 
+      label: 'LinkedIn', 
+      icon: Linkedin,
+      external: true
+    },
+    { 
+      href: '/', 
+      label: 'Home', 
+      icon: Home 
+    },
+    { 
+      href: '/contact', 
+      label: 'Contact', 
+      icon: Mail 
+    }
   ]
 
   const handleSectionClick = (sectionId: string) => {
@@ -92,14 +106,27 @@ export default function MobileSidebar({ activeSection, onSectionChange }: Mobile
                 <ul className="space-y-2">
                   {navigationItems.map((item) => (
                     <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className="flex items-center px-3 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-dark-800 transition-all duration-200 group"
-                      >
-                        <item.icon className="flex-shrink-0 group-hover:text-primary-400 transition-colors" size={20} />
-                        <span className="ml-3 font-medium">{item.label}</span>
-                      </Link>
+                      {item.external ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center px-3 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-dark-800 transition-all duration-200 group"
+                        >
+                          <item.icon className="flex-shrink-0 group-hover:text-primary-400 transition-colors" size={20} />
+                          <span className="ml-3 font-medium">{item.label}</span>
+                          <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center px-3 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-dark-800 transition-all duration-200 group"
+                        >
+                          <item.icon className="flex-shrink-0 group-hover:text-primary-400 transition-colors" size={20} />
+                          <span className="ml-3 font-medium">{item.label}</span>
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
