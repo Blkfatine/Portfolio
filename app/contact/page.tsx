@@ -111,10 +111,10 @@ export default function Contact() {
       initial="hidden"
       animate={mounted ? "visible" : "hidden"}
     >
-      {/* Animated background elements */}
+      {/* Animated background elements - scaled down for mobile */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute -top-96 -left-96 w-[800px] h-[800px] bg-primary-500/10 rounded-full mix-blend-soft-light blur-3xl"></div>
-        <div className="absolute -bottom-96 -right-96 w-[800px] h-[800px] bg-blue-500/10 rounded-full mix-blend-soft-light blur-3xl"></div>
+        <div className="absolute -top-48 -left-48 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] md:w-[800px] md:h-[800px] bg-primary-500/10 rounded-full mix-blend-soft-light blur-3xl"></div>
+        <div className="absolute -bottom-48 -right-48 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] md:w-[800px] md:h-[800px] bg-blue-500/10 rounded-full mix-blend-soft-light blur-3xl"></div>
       </div>
       {/* Navigation Bar */}
       <motion.div 
@@ -140,37 +140,38 @@ export default function Contact() {
       </motion.div>
 
       <motion.div 
-        className="max-w-6xl mx-auto py-12 relative z-10"
+        className="max-w-6xl mx-auto py-8 sm:py-12 relative z-10 px-2 sm:px-4"
         variants={staggerContainer}
       >
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16 px-2"
           variants={fadeInUp}
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6">
             Get In Touch
           </h1>
-          <p className="text-gray-400 text-lg">
-  As a computer engineering student passionate about web and mobile development, I’m always open to new opportunities and collaborations!
-</p>
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+            As a computer engineering student passionate about web and mobile development, I'm always open to new opportunities and collaborations!
+          </p>
 
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
           {/* Contact Info */}
           <motion.div 
             className="h-full flex flex-col"
             variants={fadeInUp}
           >
-            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/5 shadow-2xl flex-1 flex flex-col justify-center">
+            <div className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/5 shadow-2xl flex-1 flex flex-col justify-center">
               <h2 className="text-2xl font-bold text-white mb-8 pb-4 border-b border-white/10">
                 Contact Information
               </h2>
-              <div className="space-y-6 pt-8">
+              <div className="space-y-4 sm:space-y-6 pt-6 sm:pt-8">
                 <div 
-                  className="flex items-center space-x-4 p-4 rounded-xl hover:bg-white/5 transition-colors group cursor-pointer"
+                  className="flex items-center space-x-4 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-colors group cursor-pointer"
                   onMouseEnter={() => document.getElementById('message-section')?.classList.add('ring-2', 'ring-primary-500/50')}
                   onMouseLeave={() => document.getElementById('message-section')?.classList.remove('ring-2', 'ring-primary-500/50')}
+                  onClick={() => document.getElementById('message-section')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
                     <Mail className="text-white" size={20} />
@@ -183,7 +184,7 @@ export default function Contact() {
 
                 <a 
                   href="tel:+212635291627"
-                  className="flex items-center space-x-4 p-4 rounded-xl hover:bg-white/5 transition-colors group"
+                  className="flex items-center space-x-4 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-colors group"
                 >
                   <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
                     <Phone className="text-white" size={20} />
@@ -195,8 +196,7 @@ export default function Contact() {
                 </a>
 
                 <div 
-                  className="flex items-center space-x-4 p-4 rounded-xl hover:bg-white/5 transition-colors group cursor-pointer"
-                  
+                  className="flex items-center space-x-4 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-colors group cursor-pointer"
                 >
                   <div className="bg-gradient-to-br from-purple-500 to-indigo-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
                     <MapPin className="text-white" size={20} />
@@ -240,13 +240,13 @@ export default function Contact() {
             className="relative"
             variants={fadeInUp}
           >
-            <div id="message-section" className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/5 shadow-2xl transition-all duration-300">
+            <div id="message-section" className="bg-white/5 backdrop-blur-sm p-5 sm:p-6 md:p-8 rounded-2xl border border-white/5 shadow-2xl transition-all duration-300">
               <h2 className="text-2xl font-bold text-white mb-8 pb-4 border-b border-white/10">
                 Send Me a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="block text-white font-medium">
+                <div className="space-y-1.5">
+                  <label htmlFor="name" className="block text-white font-medium text-sm sm:text-base">
                     Name <span className="text-red-400">*</span>
                   </label>
                   <div className="relative">
@@ -269,8 +269,8 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label htmlFor="email" className="block text-white font-medium">
+                <div className="space-y-1.5">
+                  <label htmlFor="email" className="block text-white font-medium text-sm sm:text-base">
                     Email <span className="text-red-400">*</span>
                   </label>
                   <div className="relative">
@@ -298,8 +298,8 @@ export default function Contact() {
                   )}
                 </div>
 
-                <div className="space-y-2">
-                  <label htmlFor="message" className="block text-white font-medium">
+                <div className="space-y-1.5">
+                  <label htmlFor="message" className="block text-white font-medium text-sm sm:text-base">
                     Message <span className="text-red-400">*</span>
                   </label>
                   <div className="relative">
