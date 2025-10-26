@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X, Home, User, Briefcase, GraduationCap, Code, Mail, Linkedin } from 'lucide-react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface MobileSidebarProps {
   activeSection: string
@@ -58,9 +59,23 @@ export default function MobileSidebar({ activeSection, onSectionChange }: Mobile
     }
   ]
 
+  const pathname = usePathname()
+  const isContactPage = pathname === '/contact'
+
   const handleSectionClick = (sectionId: string) => {
     onSectionChange(sectionId)
     setIsOpen(false)
+    
+    // If we're on the contact page and clicking email, scroll to form
+    if (isContactPage && sectionId === 'email') {
+      const form = document.getElementById('contact-form')
+      if (form) {
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        return
+      }
+    }
+    
+    // Otherwise, handle as normal section click
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
