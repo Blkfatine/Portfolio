@@ -68,8 +68,8 @@ export default function Hero() {
         {/* Download CV Button */}
 <div className="flex justify-center">
   <a
-    href="/CV Fatine Belkhammar - 22oct - ENG.pdf"
-    download="CV Fatine Belkhammar - 22oct - ENG.pdf"
+    href="/cv-fatine-belkhammar-22oct-eng.pdf"
+    download="Fatine-Belkhammar-CV.pdf"
     className="inline-flex items-center text-white hover:text-primary-400 transition-colors group"
   >
     <span>Download CV</span>
