@@ -65,6 +65,30 @@ export default function Hero() {
             <span>→</span>
           </a>
         </div>
+        {/* Download CV Button */}
+<div className="flex justify-center">
+  <a
+    href="/CV Fatine Belkhammar - 22oct - ENG.pdf"
+    download="CV Fatine Belkhammar - 22oct - ENG.pdf"
+    className="inline-flex items-center text-white hover:text-primary-400 transition-colors group"
+  >
+    <span>Download CV</span>
+    <svg
+      className="w-5 h-5 ml-2 group-hover:translate-y-0.5 transition-transform"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+      />
+    </svg>
+  </a>
+</div>
       </div>
     </section>
   )
