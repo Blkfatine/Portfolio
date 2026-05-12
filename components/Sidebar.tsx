@@ -141,7 +141,7 @@ export default function Sidebar({ activeSection, onSectionChange, isCollapsed, o
         {!isCollapsed && (
           <div className="p-4 border-t border-gray-800">
             <p className="text-xs text-gray-500 text-center">
-              © 2025 Fatine B.
+              © 2026 Fatine B.
             </p>
           </div>
         )}
