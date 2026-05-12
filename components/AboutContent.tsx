@@ -12,8 +12,8 @@ export default function AboutContent() {
     en: {
       aboutTitle: 'About Me',
       aboutSubtitle: "I'm Fatine Belkhammar, a software engineer passionate about",
-      aboutHighlight: 'AI, VoIP & Full-Stack Development',
-      aboutBody: "I enjoy building systems that actually solve problems — from intelligent voice agents and VoIP infrastructures to full-stack web applications and automated workflows. I like seeing a project through from the first idea to something stable and shipped. Recently graduated from the engineering program at EMSI Casablanca, I'm open to exciting opportunities where technology meets real-world impact.",
+      aboutHighlight: 'AI & Full-Stack Development',
+      aboutBody: "I enjoy building systems that actually solve problems — from AI-powered applications and automated workflows to full-stack web products. I like seeing a project through from the first idea to something stable and shipped. Recently graduated from the engineering program at EMSI Casablanca, I'm open to exciting opportunities where technology meets real-world impact.",
       stats: ['Bac+5 Engineering Degree', '3 Professional internships', '6+ Programming languages'],
       experienceTitle: 'Professional Experience',
       projectsTitle: 'Academic Projects',
