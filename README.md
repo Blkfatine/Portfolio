@@ -15,4 +15,4 @@ Next.js 14 • TypeScript • Tailwind CSS • Node.js
 
 ---
 
-© 2025 Fatine Belkhammar
+© 2026 Fatine Belkhammar
