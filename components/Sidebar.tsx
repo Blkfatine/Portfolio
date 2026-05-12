@@ -19,15 +19,15 @@ export default function Sidebar({ activeSection, onSectionChange, isCollapsed, o
       isSection: true
     },
     { 
-      id: 'academic-projects', 
-      label: 'Academic Projects',
-      icon: GraduationCap,
-      isSection: true
-    },
-    { 
       id: 'experience', 
       label: 'Professional Experience',
       icon: Briefcase,
+      isSection: true
+    },
+    { 
+      id: 'academic-projects', 
+      label: 'Academic Projects',
+      icon: GraduationCap,
       isSection: true
     },
     { 
