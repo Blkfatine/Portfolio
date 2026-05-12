@@ -114,9 +114,8 @@ export default function AboutContent() {
     fr: {
       aboutTitle: 'À propos',
       aboutSubtitle: 'Je suis Fatine Belkhammar, ingénieure logiciel passionnée par',
-      aboutHighlight: "l'IA, la VoIP & le développement Full-Stack",
-      aboutBody: "J'aime construire des systèmes qui résolvent de vrais problèmes — des agents vocaux intelligents aux infrastructures VoIP, en passant par les applications web full-stack et les workflows automatisés. Diplômée du cycle d'ingénierie à l'EMSI Casablanca, je suis ouverte à toute opportunité stimulante où la technologie répond à des enjeux concrets.",
-      stats: ["Bac+5 Diplôme Ingénieur", '3 stages professionnels', '6+ langages de programmation'],
+      aboutHighlight: "l'IA & le Développement Full-Stack",
+      aboutBody: "J'aime construire des systèmes qui résolvent de vrais problèmes — des applications propulsées par l'IA aux workflows automatisés, en passant par les produits web full-stack. Diplômée du cycle d'ingénierie à l'EMSI Casablanca, je suis ouverte à toute opportunité stimulante où la technologie répond à des enjeux concrets.",      stats: ["Bac+5 Diplôme Ingénieur", '3 stages professionnels', '6+ langages de programmation'],
       experienceTitle: 'Expérience Professionnelle',
       projectsTitle: 'Projets Universitaires',
       skillsTitle: 'Compétences Techniques',
