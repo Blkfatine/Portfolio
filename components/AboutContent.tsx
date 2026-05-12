@@ -95,11 +95,11 @@ export default function AboutContent() {
         },
         {
           title: 'VoIP & AI',
-          skills: ['3CX', 'Yeastar', 'LiveKit', 'Vicidial', 'n8n', 'Odoo'],
+          skills: ['3CX', 'Yeastar', 'LiveKit', 'Vicidial'],
         },
         {
           title: 'DevOps & Tools',
-          skills: ['Docker', 'Git', 'GitHub', 'Grafana', 'Jira', 'WordPress'],
+          skills: ['Docker', 'Git', 'GitHub', 'Grafana', 'Jira', 'WordPress', 'n8n', 'Odoo'],
         },
         {
           title: 'Databases',
