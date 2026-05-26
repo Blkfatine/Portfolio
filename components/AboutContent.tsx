@@ -25,13 +25,13 @@ export default function AboutContent() {
           company: 'Ennova Group • Casablanca',
           duration: 'Feb. 2026 – Present',
           description: [
-            'Designed and deployed an AI voice agent for commercial call automation, built on 5 Python microservices orchestrated via LiveKit.',
+            'Designed an event-driven architecture of 3 decoupled Python workers (Voice, CRM, Monitoring) communicating asynchronously via Redis Pub/Sub under Docker.',
+            'Integrated LiveKit SIP/WebRTC media streams with Gemini Live API for real-time voice interactions; resolved SDK incompatibilities through dynamic CRM context injection at session initialization.',
+            'Built a post-call processing pipeline using GPT-4o-mini for automated lead extraction and CRM contact synchronization via custom GraphQL mutations.',
+            'Developed a FastAPI backend and a live-polling React dashboard exposing real-time QA scoring metrics across a 5-table PostgreSQL schema.',
             'Administered 2 VoIP platforms (3CX and Yeastar): configured SIP trunks, agent extensions and call routing rules.',
-            'Implemented a real-time monitoring dashboard (Grafana) tracking 4 key call performance metrics.',
-            'Developed an automated reporting module generating call transcriptions delivered by email after each session.',
-            'Independently mastered 6 professional tools: Vicidial, Odoo (ERP), n8n, WordPress, 3CX and Yeastar.',
           ],
-          technologies: ['Python', 'LiveKit', '3CX', 'Yeastar', 'Grafana', 'n8n', 'Odoo', 'Docker'],
+          technologies: ['Python', 'LiveKit', 'Redis', 'FastAPI', 'React', 'PostgreSQL', 'GPT-4o-mini', 'Gemini Live API', 'Docker', 'GraphQL', '3CX'],
         },
         {
           icon: Cpu,
@@ -95,7 +95,7 @@ export default function AboutContent() {
         },
         {
           title: 'VoIP & AI',
-          skills: ['3CX', 'Yeastar', 'LiveKit', 'Vicidial'],
+          skills: ['LiveKit', 'Gemini Live API', 'GPT-4o-mini', 'Redis', 'FastAPI', '3CX', 'Yeastar'],
         },
         {
           title: 'DevOps & Tools',
@@ -126,13 +126,13 @@ export default function AboutContent() {
           company: 'Ennova Group • Casablanca',
           duration: 'Fév. 2026 – Présent',
           description: [
-            "Conception et déploiement d'un agent vocal IA pour l'automatisation des appels commerciaux, basé sur 5 microservices Python orchestrés via LiveKit.",
+            "Conçu une architecture événementielle de 3 workers Python découplés (Vocal, CRM, Monitoring) communiquant de manière asynchrone via Redis Pub/Sub sous Docker.",
+            "Intégré les flux médias LiveKit SIP/WebRTC avec l'API Gemini Live pour des interactions vocales en temps réel ; résolution des incompatibilités SDK via injection dynamique du contexte CRM à l'initialisation de session.",
+            "Construit un pipeline post-appel avec GPT-4o-mini pour l'extraction automatisée de leads et la synchronisation CRM via mutations GraphQL.",
+            "Développé une API FastAPI et un tableau de bord React en live-polling exposant des métriques QA réelles sur un schéma PostgreSQL 5 tables.",
             "Administration de 2 plateformes VoIP (3CX et Yeastar) : configuration de trunks SIP, extensions d'agents et règles de routage.",
-            "Implémentation d'un tableau de bord de monitoring en temps réel (Grafana) couvrant 4 métriques clés.",
-            "Développement d'un module de rapports automatisés avec transcription envoyée par e-mail après chaque appel.",
-            "Maîtrise autonome de 6 outils professionnels : Vicidial, Odoo, n8n, WordPress, 3CX et Yeastar.",
           ],
-          technologies: ['Python', 'LiveKit', '3CX', 'Yeastar', 'Grafana', 'n8n', 'Odoo', 'Docker'],
+          technologies: ['Python', 'LiveKit', 'Redis', 'FastAPI', 'React', 'PostgreSQL', 'GPT-4o-mini', 'Gemini Live API', 'Docker', 'GraphQL', '3CX'],
         },
         {
           icon: Cpu,
@@ -196,7 +196,7 @@ export default function AboutContent() {
         },
         {
           title: 'VoIP & IA',
-          skills: ['3CX', 'Yeastar', 'LiveKit', 'Vicidial', 'n8n', 'Odoo'],
+          skills: ['LiveKit', 'Gemini Live API', 'GPT-4o-mini', 'Redis', 'FastAPI', '3CX', 'Yeastar'],
         },
         {
           title: 'DevOps & Outils',
