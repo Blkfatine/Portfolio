@@ -13,7 +13,7 @@ export default function AboutContent() {
       aboutTitle: 'About Me',
       aboutSubtitle: "I'm Fatine Belkhammar, a software engineer passionate about",
       aboutHighlight: 'AI & Full-Stack Development',
-      aboutBody: "I enjoy building systems that actually solve problems — from AI-powered applications and automated workflows to full-stack web products. I like seeing a project through from the first idea to something stable and shipped. Recently graduated from the engineering program at EMSI Casablanca, I'm open to exciting opportunities where technology meets real-world impact.",
+      aboutBody: "I enjoy building systems that actually solve problems, from AI-powered applications and automated workflows to full-stack web products. I like seeing a project through from the first idea to something stable and shipped. Recently graduated from the engineering program at EMSI Casablanca, I'm open to exciting opportunities where technology meets real-world impact.",
       stats: ['Bac+5 Engineering Degree', '3 Professional internships', '6+ Programming languages'],
       experienceTitle: 'Professional Experience',
       projectsTitle: 'Academic Projects',
@@ -23,7 +23,7 @@ export default function AboutContent() {
           icon: Mic,
           title: 'AI Voice Agent Development',
           company: 'Ennova Group • Casablanca',
-          duration: 'Feb. 2026 – Present',
+          duration: 'Feb. 2026 – Jun 2026',
           description: [
             'Designed an event-driven architecture of 3 decoupled Python workers (Voice, CRM, Monitoring) communicating asynchronously via Redis Pub/Sub under Docker.',
             'Integrated LiveKit SIP/WebRTC media streams with Gemini Live API for real-time voice interactions; resolved SDK incompatibilities through dynamic CRM context injection at session initialization.',
@@ -115,7 +115,7 @@ export default function AboutContent() {
       aboutTitle: 'À propos',
       aboutSubtitle: 'Je suis Fatine Belkhammar, ingénieure logiciel passionnée par',
       aboutHighlight: "l'IA & le Développement Full-Stack",
-      aboutBody: "J'aime construire des systèmes qui résolvent de vrais problèmes — des applications propulsées par l'IA aux workflows automatisés, en passant par les produits web full-stack. Diplômée du cycle d'ingénierie à l'EMSI Casablanca, je suis ouverte à toute opportunité stimulante où la technologie répond à des enjeux concrets.",      stats: ["Bac+5 Diplôme Ingénieur", '3 stages professionnels', '6+ langages de programmation'],
+      aboutBody: "J'aime construire des systèmes qui résolvent de vrais problèmes, des applications propulsées par l'IA aux workflows automatisés, en passant par les produits web full-stack. Diplômée du cycle d'ingénierie à l'EMSI Casablanca, je suis ouverte à toute opportunité stimulante où la technologie répond à des enjeux concrets.",
       experienceTitle: 'Expérience Professionnelle',
       projectsTitle: 'Projets Universitaires',
       skillsTitle: 'Compétences Techniques',
@@ -124,7 +124,7 @@ export default function AboutContent() {
           icon: Mic,
           title: "Développement d'un Agent Vocal Intelligent",
           company: 'Ennova Group • Casablanca',
-          duration: 'Fév. 2026 – Présent',
+          duration: 'Fév. 2026 – Juin 2026',
           description: [
             "Conçu une architecture événementielle de 3 workers Python découplés (Vocal, CRM, Monitoring) communiquant de manière asynchrone via Redis Pub/Sub sous Docker.",
             "Intégré les flux médias LiveKit SIP/WebRTC avec l'API Gemini Live pour des interactions vocales en temps réel ; résolution des incompatibilités SDK via injection dynamique du contexte CRM à l'initialisation de session.",
@@ -233,7 +233,7 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Professional Experience — now BEFORE projects */}
+      {/* Professional Experience, now before projects */}
       <section id="experience">
         <div className="flex items-center mb-8">
           <h2 className="text-3xl font-bold text-white mr-4">{tr.experienceTitle}</h2>
