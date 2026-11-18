@@ -10,18 +10,18 @@ export const Hero: React.FC = () => {
   const statIcons = [GraduationCap, Briefcase, Code2, Sparkles];
 
   return (
-    <section className="relative z-10 pt-6 pb-16 md:pt-12 md:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden max-w-7xl mx-auto">
+    <section className="relative z-10 pt-6 pb-16 md:pt-12 md:pb-24 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden max-w-[1600px] mx-auto">
       
-      {/* Desktop Floating Stat Containers (replacing generic pills) */}
+      {/* Desktop Floating Stat Containers - Positioned far at the outer edges, cleared from the title */}
       <div className="hidden xl:block absolute inset-0 pointer-events-none select-none">
         
-        {/* Card 1: Bac+5 Engineering Degree (Top Left) */}
+        {/* Card 1: Bac+5 Engineering Degree (Top Left - level with avatar, far from title) */}
         {stats[0] && (
           <motion.div
             animate={{ y: [-5, 5, -5], rotate: [-2, 0, -2] }}
             transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
             style={{ backgroundColor: stats[0].color }}
-            className="absolute top-12 left-4 2xl:left-10 w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
+            className="absolute top-6 left-2 xl:left-4 2xl:left-12 w-52 xl:w-56 2xl:w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
           >
             <div className="flex items-center justify-between mb-2">
               <span className="font-heading font-extrabold text-2xl xl:text-3xl text-[#2E2833] tracking-tight">
@@ -40,13 +40,13 @@ export const Hero: React.FC = () => {
           </motion.div>
         )}
 
-        {/* Card 2: 3 Professional Internships (Bottom Left) */}
+        {/* Card 2: 3 Professional Internships (Bottom Left - level with CTA buttons, far from title) */}
         {stats[1] && (
           <motion.div
             animate={{ y: [6, -6, 6], rotate: [1, -1, 1] }}
             transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
             style={{ backgroundColor: stats[1].color }}
-            className="absolute top-80 left-2 2xl:left-8 w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
+            className="absolute top-[380px] xl:top-[420px] left-2 xl:left-4 2xl:left-12 w-52 xl:w-56 2xl:w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
           >
             <div className="flex items-center justify-between mb-2">
               <span className="font-heading font-extrabold text-2xl xl:text-3xl text-[#2E2833] tracking-tight">
@@ -65,13 +65,13 @@ export const Hero: React.FC = () => {
           </motion.div>
         )}
 
-        {/* Card 3: 6+ Core Languages (Top Right) */}
+        {/* Card 3: 6+ Core Languages (Top Right - level with avatar, far from title) */}
         {stats[2] && (
           <motion.div
             animate={{ y: [5, -5, 5], rotate: [2, 0, 2] }}
             transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
             style={{ backgroundColor: stats[2].color }}
-            className="absolute top-12 right-4 2xl:right-10 w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
+            className="absolute top-6 right-2 xl:right-4 2xl:right-12 w-52 xl:w-56 2xl:w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
           >
             <div className="flex items-center justify-between mb-2">
               <span className="font-heading font-extrabold text-2xl xl:text-3xl text-[#2E2833] tracking-tight">
@@ -90,13 +90,13 @@ export const Hero: React.FC = () => {
           </motion.div>
         )}
 
-        {/* Card 4: 100% Commitment to Impact (Bottom Right) */}
+        {/* Card 4: 100% Commitment to Impact (Bottom Right - level with CTA buttons, far from title) */}
         {stats[3] && (
           <motion.div
             animate={{ y: [-6, 6, -6], rotate: [-1, 1, -1] }}
             transition={{ duration: 5.0, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
             style={{ backgroundColor: stats[3].color }}
-            className="absolute top-80 right-2 2xl:right-8 w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
+            className="absolute top-[380px] xl:top-[420px] right-2 xl:right-4 2xl:right-12 w-52 xl:w-56 2xl:w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
           >
             <div className="flex items-center justify-between mb-2">
               <span className="font-heading font-extrabold text-2xl xl:text-3xl text-[#2E2833] tracking-tight">
@@ -117,7 +117,7 @@ export const Hero: React.FC = () => {
 
       </div>
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="max-w-3xl 2xl:max-w-4xl mx-auto text-center relative z-10 px-4">
         
         {/* Availability Eyebrow Pill */}
         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white softy-border softy-shadow-sm mb-6">
@@ -159,8 +159,8 @@ export const Hero: React.FC = () => {
           {hero.greeting} <span className="font-bold underline decoration-[#FFD6DF] decoration-4">{hero.name}</span>
         </p>
 
-        {/* Hero Headline */}
-        <h1 className="font-heading font-bold text-3xl sm:text-5xl lg:text-6xl text-[#2E2833] leading-[1.15] tracking-tight mb-6 max-w-3xl mx-auto">
+        {/* Hero Headline - Centered with plenty of breathing room */}
+        <h1 className="font-heading font-bold text-3xl sm:text-5xl lg:text-[50px] xl:text-[54px] text-[#2E2833] leading-[1.18] tracking-tight mb-6 max-w-2xl xl:max-w-2xl 2xl:max-w-3xl mx-auto">
           {hero.headlinePart1}{' '}
           <span className="inline-block px-3 py-0.5 rounded-2xl bg-[#C3ACFF] softy-border transform -rotate-1 softy-shadow-sm">
             {hero.headlineHighlight}
@@ -211,8 +211,8 @@ export const Hero: React.FC = () => {
           ))}
         </div>
 
-        {/* Mobile & Tablet Responsive Stat Cards (< xl) */}
-        <div className="xl:hidden mt-10 grid grid-cols-2 gap-3 sm:gap-4 max-w-xl mx-auto text-left">
+        {/* Mobile & Tablet Responsive Stat Cards (< xl) with generous margin */}
+        <div className="xl:hidden mt-12 sm:mt-16 grid grid-cols-2 gap-3 sm:gap-4 max-w-xl mx-auto text-left">
           {stats.map((stat, idx) => {
             const Icon = statIcons[idx % statIcons.length];
             return (
