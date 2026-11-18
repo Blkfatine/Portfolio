@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@theme {
+  --color-softy-cream: #FFF7EC;
+  --color-softy-ink: #2E2833;
+  --color-softy-pink: #FFD6DF;
+  --color-softy-violet: #C3ACFF;
+  --color-softy-yellow: #FFEAA0;
+  --color-softy-blue: #9FD7EF;
+  --color-softy-dark: #3B3341;
+  --color-softy-muted: #6B6375;
+  --color-softy-card: #FFFFFF;
+
+  --font-fredoka: 'Fredoka', cursive, sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+:root {
+  --softy-cream: #FFF7EC;
+  --softy-ink: #2E2833;
+  --softy-pink: #FFD6DF;
+  --softy-violet: #C3ACFF;
+  --softy-yellow: #FFEAA0;
+  --softy-blue: #9FD7EF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF7EC;
+  color: #2E2833;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* Custom Softy Neo-pop Utility Classes */
+.softy-border {
+  border: 2px solid #2E2833;
+}
+
+.softy-border-3 {
+  border: 3px solid #2E2833;
+}
+
+.softy-shadow-sm {
+  box-shadow: 2px 2px 0px #2E2833;
+}
+
+.softy-shadow {
+  box-shadow: 3px 3px 0px #2E2833;
+}
+
+.softy-shadow-lg {
+  box-shadow: 5px 5px 0px #2E2833;
+}
+
+.softy-shadow-xl {
+  box-shadow: 6px 6px 0px #2E2833;
+}
+
+.softy-shadow-violet {
+  box-shadow: 4px 4px 0px #C3ACFF;
+}
+
+.softy-shadow-pink {
+  box-shadow: 4px 4px 0px #FFD6DF;
+}
+
+.softy-shadow-yellow {
+  box-shadow: 4px 4px 0px #FFEAA0;
+}
+
+.softy-btn-press {
+  transition: all 0.15s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.softy-btn-press:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #2E2833;
+}
+
+.softy-btn-press:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #2E2833;
+}
+
+/* Organic Blobs */
+.softy-puffy-badge {
+  border-radius: 44% 48% 42% 46%;
+}
+
+.softy-puffy-badge-alt {
+  border-radius: 48% 42% 46% 44%;
+}
+
+/* Ticker Animation */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 25s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Float & Drift Keyframes */
+@keyframes softy-drift {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes softy-drift-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-2deg);
+  }
+}
+
+.animate-drift {
+  animation: softy-drift 4s ease-in-out infinite;
+}
+
+.animate-drift-slow {
+  animation: softy-drift 6s ease-in-out infinite;
+}
+
+.animate-drift-reverse {
+  animation: softy-drift-reverse 5s ease-in-out infinite;
+}
+
+/* Input Focus Glow */
+input:focus, textarea:focus, select:focus {
+  outline: 3px solid #9FD7EF !important;
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF7EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C3ACFF;
+  border: 2px solid #2E2833;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD6DF;
+}
