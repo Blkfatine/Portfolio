@@ -1,57 +1,119 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Download, ArrowRight, Heart, Sparkles, Terminal, Bot, Cpu, Layers } from 'lucide-react';
+import { Download, ArrowRight, Heart, Sparkles, GraduationCap, Briefcase, Code2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Hero: React.FC = () => {
   const { content } = useLanguage();
-  const { hero } = content;
+  const { hero, stats } = content;
+
+  const statIcons = [GraduationCap, Briefcase, Code2, Sparkles];
 
   return (
-    <section className="relative z-10 pt-6 pb-20 md:pt-12 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative z-10 pt-6 pb-16 md:pt-12 md:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden max-w-7xl mx-auto">
       
-      {/* Decorative Floating Tech Pills */}
-      <div className="hidden lg:block absolute inset-0 pointer-events-none select-none">
+      {/* Desktop Floating Stat Containers (replacing generic pills) */}
+      <div className="hidden xl:block absolute inset-0 pointer-events-none select-none">
         
-        {/* Python Sticker Top Left */}
-        <motion.div
-          animate={{ y: [-6, 6, -6], rotate: [-6, -4, -6] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-12 left-10 xl:left-20 bg-[#FFEAA0] softy-border px-4 py-2 rounded-full softy-shadow-sm flex items-center space-x-2 pointer-events-auto cursor-default hover:scale-110 transition-transform"
-        >
-          <Terminal size={16} className="text-[#2E2833]" />
-          <span className="font-heading font-bold text-xs uppercase tracking-wider text-[#2E2833]">Python & FastAPI</span>
-        </motion.div>
+        {/* Card 1: Bac+5 Engineering Degree (Top Left) */}
+        {stats[0] && (
+          <motion.div
+            animate={{ y: [-5, 5, -5], rotate: [-2, 0, -2] }}
+            transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
+            style={{ backgroundColor: stats[0].color }}
+            className="absolute top-12 left-4 2xl:left-10 w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-heading font-extrabold text-2xl xl:text-3xl text-[#2E2833] tracking-tight">
+                {stats[0].value}
+              </span>
+              <div className="w-8 h-8 rounded-full bg-white/80 softy-border flex items-center justify-center softy-shadow-sm flex-shrink-0">
+                <GraduationCap size={16} className="text-[#2E2833]" />
+              </div>
+            </div>
+            <p className="font-heading font-bold text-xs xl:text-sm text-[#2E2833] leading-snug">
+              {stats[0].label}
+            </p>
+            <p className="text-[11px] text-[#2E2833]/75 font-medium mt-0.5 leading-tight">
+              {stats[0].sublabel}
+            </p>
+          </motion.div>
+        )}
 
-        {/* LiveKit & AI Top Right */}
-        <motion.div
-          animate={{ y: [6, -6, 6], rotate: [5, 7, 5] }}
-          transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="absolute top-16 right-8 xl:right-24 bg-[#C3ACFF] softy-border px-4 py-2 rounded-full softy-shadow-sm flex items-center space-x-2 pointer-events-auto cursor-default hover:scale-110 transition-transform"
-        >
-          <Bot size={16} className="text-[#2E2833]" />
-          <span className="font-heading font-bold text-xs uppercase tracking-wider text-[#2E2833]">LiveKit · Gemini AI</span>
-        </motion.div>
+        {/* Card 2: 3 Professional Internships (Bottom Left) */}
+        {stats[1] && (
+          <motion.div
+            animate={{ y: [6, -6, 6], rotate: [1, -1, 1] }}
+            transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+            style={{ backgroundColor: stats[1].color }}
+            className="absolute top-80 left-2 2xl:left-8 w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-heading font-extrabold text-2xl xl:text-3xl text-[#2E2833] tracking-tight">
+                {stats[1].value}
+              </span>
+              <div className="w-8 h-8 rounded-full bg-white/80 softy-border flex items-center justify-center softy-shadow-sm flex-shrink-0">
+                <Briefcase size={16} className="text-[#2E2833]" />
+              </div>
+            </div>
+            <p className="font-heading font-bold text-xs xl:text-sm text-[#2E2833] leading-snug">
+              {stats[1].label}
+            </p>
+            <p className="text-[11px] text-[#2E2833]/75 font-medium mt-0.5 leading-tight">
+              {stats[1].sublabel}
+            </p>
+          </motion.div>
+        )}
 
-        {/* React & Next.js Middle Left */}
-        <motion.div
-          animate={{ y: [-8, 4, -8], rotate: [-3, -1, -3] }}
-          transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute top-72 left-6 xl:left-14 bg-[#9FD7EF] softy-border px-4 py-2 rounded-full softy-shadow-sm flex items-center space-x-2 pointer-events-auto cursor-default hover:scale-110 transition-transform"
-        >
-          <Layers size={16} className="text-[#2E2833]" />
-          <span className="font-heading font-bold text-xs uppercase tracking-wider text-[#2E2833]">React · Next.js</span>
-        </motion.div>
+        {/* Card 3: 6+ Core Languages (Top Right) */}
+        {stats[2] && (
+          <motion.div
+            animate={{ y: [5, -5, 5], rotate: [2, 0, 2] }}
+            transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+            style={{ backgroundColor: stats[2].color }}
+            className="absolute top-12 right-4 2xl:right-10 w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-heading font-extrabold text-2xl xl:text-3xl text-[#2E2833] tracking-tight">
+                {stats[2].value}
+              </span>
+              <div className="w-8 h-8 rounded-full bg-white/80 softy-border flex items-center justify-center softy-shadow-sm flex-shrink-0">
+                <Code2 size={16} className="text-[#2E2833]" />
+              </div>
+            </div>
+            <p className="font-heading font-bold text-xs xl:text-sm text-[#2E2833] leading-snug">
+              {stats[2].label}
+            </p>
+            <p className="text-[11px] text-[#2E2833]/75 font-medium mt-0.5 leading-tight">
+              {stats[2].sublabel}
+            </p>
+          </motion.div>
+        )}
 
-        {/* Docker Bottom Right */}
-        <motion.div
-          animate={{ y: [5, -7, 5], rotate: [6, 4, 6] }}
-          transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-          className="absolute top-80 right-10 xl:right-16 bg-[#FFD6DF] softy-border px-4 py-2 rounded-full softy-shadow-sm flex items-center space-x-2 pointer-events-auto cursor-default hover:scale-110 transition-transform"
-        >
-          <Cpu size={16} className="text-[#2E2833]" />
-          <span className="font-heading font-bold text-xs uppercase tracking-wider text-[#2E2833]">Docker & Microservices</span>
-        </motion.div>
+        {/* Card 4: 100% Commitment to Impact (Bottom Right) */}
+        {stats[3] && (
+          <motion.div
+            animate={{ y: [-6, 6, -6], rotate: [-1, 1, -1] }}
+            transition={{ duration: 5.0, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+            style={{ backgroundColor: stats[3].color }}
+            className="absolute top-80 right-2 2xl:right-8 w-64 softy-border rounded-3xl p-4 softy-shadow transition-transform hover:scale-105 pointer-events-auto text-left cursor-default"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-heading font-extrabold text-2xl xl:text-3xl text-[#2E2833] tracking-tight">
+                {stats[3].value}
+              </span>
+              <div className="w-8 h-8 rounded-full bg-white/80 softy-border flex items-center justify-center softy-shadow-sm flex-shrink-0">
+                <Sparkles size={16} className="text-[#2E2833]" />
+              </div>
+            </div>
+            <p className="font-heading font-bold text-xs xl:text-sm text-[#2E2833] leading-snug">
+              {stats[3].label}
+            </p>
+            <p className="text-[11px] text-[#2E2833]/75 font-medium mt-0.5 leading-tight">
+              {stats[3].sublabel}
+            </p>
+          </motion.div>
+        )}
 
       </div>
 
@@ -79,7 +141,6 @@ export const Hero: React.FC = () => {
                 alt={hero.name}
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  // Fallback if image fails
                   const target = e.target as HTMLImageElement;
                   target.src = "/images/profile.png";
                 }}
@@ -148,6 +209,37 @@ export const Hero: React.FC = () => {
               <span>{pill}</span>
             </React.Fragment>
           ))}
+        </div>
+
+        {/* Mobile & Tablet Responsive Stat Cards (< xl) */}
+        <div className="xl:hidden mt-10 grid grid-cols-2 gap-3 sm:gap-4 max-w-xl mx-auto text-left">
+          {stats.map((stat, idx) => {
+            const Icon = statIcons[idx % statIcons.length];
+            return (
+              <div
+                key={idx}
+                style={{ backgroundColor: stat.color }}
+                className="softy-border rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 softy-shadow transition-transform hover:-translate-y-1 flex flex-col justify-between"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-heading font-extrabold text-2xl sm:text-3xl text-[#2E2833] tracking-tight">
+                    {stat.value}
+                  </span>
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/80 softy-border flex items-center justify-center softy-shadow-sm flex-shrink-0">
+                    <Icon size={14} className="text-[#2E2833]" />
+                  </div>
+                </div>
+                <div>
+                  <p className="font-heading font-bold text-xs sm:text-sm text-[#2E2833] leading-snug">
+                    {stat.label}
+                  </p>
+                  <p className="text-[10px] sm:text-xs text-[#2E2833]/70 font-medium mt-0.5 leading-tight">
+                    {stat.sublabel}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
       </div>

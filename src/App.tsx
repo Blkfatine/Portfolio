@@ -2,7 +2,6 @@ import { LanguageProvider } from './context/LanguageContext';
 import { Ticker } from './components/Ticker';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { StatsBanner } from './components/StatsBanner';
 import { AboutSection } from './components/AboutSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ProjectsSection } from './components/ProjectsSection';
@@ -24,11 +23,8 @@ function PortfolioApp() {
         {/* Floating Apple iPhone 3D Background Emojis */}
         <BackgroundEmojis />
 
-        {/* Hero Section */}
+        {/* Hero Section with Integrated Stat Containers */}
         <Hero />
-
-        {/* Key Statistics Strip */}
-        <StatsBanner />
 
         {/* Middle Running Accent Divider */}
         <div className="my-8 relative z-10">
