@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
   const { hero } = content;
 
   return (
-    <section className="relative pt-6 pb-20 md:pt-12 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative z-10 pt-6 pb-20 md:pt-12 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
       
       {/* Decorative Floating Tech Pills */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none select-none">
@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
         {/* CTA Button Group */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6">
           <a
-            href="#projects"
+            href="#experience"
             className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#2E2833] text-[#FFF7EC] font-heading font-bold text-sm tracking-wider uppercase softy-border softy-btn-press flex items-center justify-center space-x-2 shadow-md hover:bg-[#3B3341]"
           >
             <span>{hero.viewWork}</span>

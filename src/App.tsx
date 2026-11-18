@@ -20,7 +20,7 @@ function PortfolioApp() {
       {/* Main Sticky Pill Navigation */}
       <Navbar />
 
-      <main className="flex-1 relative">
+      <main className="flex-1 relative z-0">
         {/* Floating Apple iPhone 3D Background Emojis */}
         <BackgroundEmojis />
 
@@ -31,7 +31,7 @@ function PortfolioApp() {
         <StatsBanner />
 
         {/* Middle Running Accent Divider */}
-        <div className="my-8">
+        <div className="my-8 relative z-10">
           <Ticker variant="pink" />
         </div>
 

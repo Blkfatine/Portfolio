@@ -9,7 +9,7 @@ export const StatsBanner: React.FC = () => {
   const icons = [GraduationCap, Briefcase, Code2, Sparkles];
 
   return (
-    <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {stats.map((stat, index) => {
           const Icon = icons[index % icons.length];

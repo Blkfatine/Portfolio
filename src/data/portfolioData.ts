@@ -28,6 +28,7 @@ export interface ProjectItem {
 }
 
 export interface SkillCategory {
+  id: string;
   title: string;
   color: 'violet' | 'pink' | 'yellow' | 'blue' | 'cream';
   skills: { name: string; level?: string }[];
@@ -376,13 +377,16 @@ export const portfolioContent: Record<Language, ContentData> = {
       subheading: "From low-level algorithms to cloud deployment and generative AI integration.",
       filterTabs: [
         { id: "all", label: "All Disciplines" },
-        { id: "ai", label: "AI & VoIP" },
+        { id: "languages", label: "Languages" },
         { id: "web", label: "Web & Frameworks" },
-        { id: "devops", label: "DevOps & Tools" },
-        { id: "data", label: "Databases" }
+        { id: "ai", label: "AI & VoIP" },
+        { id: "data", label: "Databases" },
+        { id: "devops", label: "DevOps & Cloud" },
+        { id: "architecture", label: "Architecture" }
       ],
       categories: [
         {
+          id: "languages",
           title: "Programming Languages",
           color: "violet",
           skills: [
@@ -395,6 +399,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "web",
           title: "Web & Frameworks",
           color: "pink",
           skills: [
@@ -407,6 +412,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "ai",
           title: "VoIP & Artificial Intelligence",
           color: "yellow",
           skills: [
@@ -419,6 +425,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "devops",
           title: "DevOps & Cloud Tools",
           color: "blue",
           skills: [
@@ -431,6 +438,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "data",
           title: "Databases & Storage",
           color: "cream",
           skills: [
@@ -441,6 +449,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "architecture",
           title: "Architecture & Design",
           color: "pink",
           skills: [
@@ -720,13 +729,16 @@ export const portfolioContent: Record<Language, ContentData> = {
       subheading: "Du code bas niveau aux architectures cloud et à l'intelligence artificielle générative.",
       filterTabs: [
         { id: "all", label: "Toutes les disciplines" },
-        { id: "ai", label: "IA & VoIP" },
+        { id: "languages", label: "Langages" },
         { id: "web", label: "Web & Frameworks" },
-        { id: "devops", label: "DevOps & Outils" },
-        { id: "data", label: "Bases de données" }
+        { id: "ai", label: "IA & VoIP" },
+        { id: "data", label: "Bases de données" },
+        { id: "devops", label: "DevOps & Cloud" },
+        { id: "architecture", label: "Architecture" }
       ],
       categories: [
         {
+          id: "languages",
           title: "Langages de Programmation",
           color: "violet",
           skills: [
@@ -739,6 +751,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "web",
           title: "Web & Frameworks",
           color: "pink",
           skills: [
@@ -751,6 +764,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "ai",
           title: "VoIP & Intelligence Artificielle",
           color: "yellow",
           skills: [
@@ -763,6 +777,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "devops",
           title: "DevOps & Outils Cloud",
           color: "blue",
           skills: [
@@ -775,6 +790,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "data",
           title: "Bases de Données",
           color: "cream",
           skills: [
@@ -785,6 +801,7 @@ export const portfolioContent: Record<Language, ContentData> = {
           ]
         },
         {
+          id: "architecture",
           title: "Architecture & Conception",
           color: "pink",
           skills: [

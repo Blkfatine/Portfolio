@@ -20,7 +20,7 @@ export const ExperienceSection: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section id="experience" className="scroll-mt-28 py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto relative z-10">
       
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-14">

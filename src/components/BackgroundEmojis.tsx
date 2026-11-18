@@ -24,7 +24,7 @@ export const FloatingEmoji: React.FC<FloatingEmojiProps> = ({
 }) => {
   return (
     <motion.div
-      className={`absolute select-none pointer-events-auto cursor-pointer z-0 ${className}`}
+      className={`absolute select-none pointer-events-none -z-10 ${className}`}
       initial={{ rotate: initialRotate }}
       animate={{
         y: [-yOffset, yOffset, -yOffset],
@@ -56,15 +56,15 @@ export const FloatingEmoji: React.FC<FloatingEmojiProps> = ({
 
 export const BackgroundEmojis: React.FC = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none -z-0">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 select-none">
       
-      {/* --- HERO SECTION EMOJIS --- */}
+      {/* --- HERO SECTION EMOJIS (Desktop & Tablet only in side gutters) --- */}
       {/* Uploaded iPhone Growing Heart near Hero Headline */}
       <FloatingEmoji
         src="/emojis/growing-heart.png"
         alt="Growing Heart"
         size={54}
-        className="top-24 right-6 lg:right-16 xl:right-32"
+        className="hidden md:block top-24 right-6 lg:right-16 xl:right-32"
         initialRotate={8}
         duration={4.8}
         delay={0.2}
@@ -76,7 +76,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/ribbon.png"
         alt="Ribbon Bow"
         size={46}
-        className="top-36 left-4 lg:left-14 xl:left-24"
+        className="hidden md:block top-36 left-4 lg:left-14 xl:left-24"
         initialRotate={-10}
         duration={5.2}
         delay={0.6}
@@ -88,7 +88,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/cherry-blossom.png"
         alt="Cherry Blossom"
         size={44}
-        className="top-[420px] left-6 lg:left-28"
+        className="hidden md:block top-[420px] left-6 lg:left-24"
         initialRotate={12}
         duration={4.5}
         delay={1.2}
@@ -100,7 +100,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/sparkles.png"
         alt="Sparkles"
         size={42}
-        className="top-[460px] right-6 lg:right-28"
+        className="hidden md:block top-[460px] right-6 lg:right-24"
         initialRotate={-6}
         duration={3.8}
         delay={0.8}
@@ -112,7 +112,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/teddy-bear.png"
         alt="Teddy Bear"
         size={50}
-        className="top-[850px] right-4 lg:right-20"
+        className="hidden md:block top-[850px] right-4 lg:right-20"
         initialRotate={6}
         duration={5.5}
         delay={1.5}
@@ -123,7 +123,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/growing-heart.png"
         alt="Growing Heart"
         size={48}
-        className="top-[1050px] left-4 lg:left-16"
+        className="hidden md:block top-[1050px] left-4 lg:left-16"
         initialRotate={-8}
         duration={4.6}
         delay={0.4}
@@ -134,7 +134,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/butterfly.png"
         alt="Butterfly"
         size={46}
-        className="top-[1350px] right-8 lg:right-24"
+        className="hidden md:block top-[1350px] right-8 lg:right-24"
         initialRotate={14}
         duration={4.2}
         delay={0.9}
@@ -145,7 +145,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/tulip.png"
         alt="Tulip"
         size={44}
-        className="top-[1550px] left-6 lg:left-20"
+        className="hidden md:block top-[1550px] left-6 lg:left-20"
         initialRotate={-12}
         duration={5.0}
         delay={1.1}
@@ -157,7 +157,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/glowing-star.png"
         alt="Glowing Star"
         size={46}
-        className="top-[1950px] right-6 lg:right-16"
+        className="hidden md:block top-[1950px] right-6 lg:right-16"
         initialRotate={10}
         duration={4.4}
         delay={0.3}
@@ -168,7 +168,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/purple-heart.png"
         alt="Purple Heart"
         size={44}
-        className="top-[2250px] left-4 lg:left-14"
+        className="hidden md:block top-[2250px] left-4 lg:left-14"
         initialRotate={-14}
         duration={4.9}
         delay={1.4}
@@ -180,7 +180,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/sparkling-heart.png"
         alt="Sparkling Heart"
         size={52}
-        className="top-[2700px] right-6 lg:right-20"
+        className="hidden md:block top-[2700px] right-6 lg:right-20"
         initialRotate={-6}
         duration={4.5}
         delay={0.5}
@@ -191,7 +191,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/cloud.png"
         alt="Cloud"
         size={48}
-        className="top-[2950px] left-6 lg:left-16"
+        className="hidden md:block top-[2950px] left-6 lg:left-16"
         initialRotate={4}
         duration={5.6}
         delay={1.6}
@@ -202,7 +202,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/growing-heart.png"
         alt="Growing Heart"
         size={46}
-        className="top-[3250px] right-8 lg:right-24"
+        className="hidden md:block top-[3250px] right-8 lg:right-24"
         initialRotate={12}
         duration={4.7}
         delay={0.7}
@@ -214,7 +214,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/ribbon.png"
         alt="Ribbon"
         size={46}
-        className="top-[3650px] left-4 lg:left-14"
+        className="hidden md:block top-[3650px] left-4 lg:left-14"
         initialRotate={-8}
         duration={5.1}
         delay={1.0}
@@ -225,7 +225,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/revolving-hearts.png"
         alt="Revolving Hearts"
         size={48}
-        className="top-[3950px] right-6 lg:right-18"
+        className="hidden md:block top-[3950px] right-6 lg:right-18"
         initialRotate={8}
         duration={4.3}
         delay={0.4}
@@ -233,12 +233,11 @@ export const BackgroundEmojis: React.FC = () => {
       />
 
       {/* --- CONTACT SECTION EMOJIS --- */}
-      {/* Prominent Growing Heart by Contact Form */}
       <FloatingEmoji
         src="/emojis/growing-heart.png"
         alt="Growing Heart"
         size={58}
-        className="top-[4350px] right-4 lg:right-20 xl:right-32"
+        className="hidden md:block top-[4350px] right-4 lg:right-20 xl:right-32"
         initialRotate={-10}
         duration={4.2}
         delay={0.2}
@@ -249,7 +248,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/cherry-blossom.png"
         alt="Cherry Blossom"
         size={46}
-        className="top-[4500px] left-4 lg:left-14"
+        className="hidden md:block top-[4500px] left-4 lg:left-14"
         initialRotate={14}
         duration={4.8}
         delay={0.9}
@@ -260,7 +259,7 @@ export const BackgroundEmojis: React.FC = () => {
         src="/emojis/sparkling-heart.png"
         alt="Sparkling Heart"
         size={48}
-        className="top-[4750px] right-8 lg:right-24"
+        className="hidden md:block top-[4750px] right-8 lg:right-24"
         initialRotate={6}
         duration={4.6}
         delay={1.3}
