@@ -27,14 +27,17 @@ export const ContactSection: React.FC = () => {
     setStatusMessage('');
 
     try {
-      // POST to /api/contact matching the GitHub repository's exact architecture
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formsubmit.co/ajax/1a5660f458555e23b9b485f0b1dd1c67', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
           name: formData.name.trim(),
           email: formData.email.trim(),
           message: formData.message.trim(),
+          _subject: `New Portfolio Message from ${formData.name.trim()}`
         }),
       });
 
